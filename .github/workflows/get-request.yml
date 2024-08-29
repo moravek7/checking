@@ -1,0 +1,15 @@
+name: GET request for app
+
+on:
+  schedule:
+    # run 30 mins
+    - cron: '*/30 * * * *'
+
+jobs:
+  request:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Make GET request
+      run: |
+        curl -X GET https://taleof2cities-gofdyu25.b4a.run/
